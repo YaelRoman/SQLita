@@ -26,9 +26,9 @@ class Alumno(var matricula : Int ?, var nombre : String ?, var apPaterno : Strin
         return promedio
     }
 
-    fun getNombre() : String = nombre + " " + apPaterno + " " + apMaterno
+    //fun getNombre() : String? = nombre + " " + apPaterno + " " + apMaterno
 
-    override fun toString() : String = matricula.toString() + " - " + getNombre()
+    //override fun toString() : String = matricula.toString() + " - " + getNombre()
 
     fun setNacimiento(fecha : String){
         val formato = SimpleDateFormat("yyyy-MM-dd")

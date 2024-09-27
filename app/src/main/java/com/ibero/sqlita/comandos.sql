@@ -1,0 +1,36 @@
+CREATE TABLE alumnos(
+   matricula INTEGER PRIMARY KEY AUTOINCREMENT,
+   nombre VARCHAR(100) NOT NULL,
+   apPaterno VARCHAR(100) NOT NULL,
+   apMaterno VARCHAR(100),
+   nacimiento DATE,
+   sexo CHAR
+);
+
+CREATE TABLE materias(
+    clave CHAR(5) PRIMARY KEY,
+    nombre VARCHAR(100),
+    creditos INT DEFAULT 10
+);
+
+CREATE TABLE calificaciones(
+    PRIMARY KEY (alumno, materia),
+    FOREIGN KEY (alumno) REFERENCES alumnos(matricula),
+    FOREIGN KEY (materia) REFERENCES materias(clave),
+    alumno INT,
+    materia CHAR(5),
+    calificacion FLOAT,
+    fecha DATE
+);
+
+DROP TABLE calificaciones;
+DROP TABLE materias;
+DROP TABLE alumnos;
+
+SELECT materia, calificacion, fecha, nombre, creditos FROM
+calificaciones JOIN materias ON materia = clave WHERE
+alumno = ? ORDER BY materia;
+
+SELECT materia, calificacion, fecha, nombre, creditos FROM
+calificaciones JOIN materias ON materia = ? WHERE
+alumno = ? ORDER BY materia;
