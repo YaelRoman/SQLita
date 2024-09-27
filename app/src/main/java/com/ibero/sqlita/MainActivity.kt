@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val db = DBHelper(this)
         textView.setText(db.getComando(0)+"-"+db.getComando(1)+"-"+db.getComando(2))
             val dataManager = DataManager(this)
-        //dataManager.guardarAlumno(Alumno(123,"Monica", "Medrano", "Valle", Date(), 'F'))
+        dataManager.guardarAlumno(Alumno("Monica", "Medrano", "Valle", Date(), 'F'))
 
     }
 }
