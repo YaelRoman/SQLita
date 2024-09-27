@@ -1,11 +1,10 @@
 package com.ibero.sqlita
 
 import java.text.SimpleDateFormat
-import java.util.ArrayList
 import java.util.Date
 
 class Alumno(var matricula : Int ?, var nombre : String ?, var apPaterno : String ?, var apMaterno : String?, var nacimiento : Date?, var sexo : Char?) {
-    lateinit var calificaciones : ArrayList<Calificacion>
+    var calificaciones : ArrayList<Calificacion> = ArrayList<Calificacion>()
 
     constructor() :
             this(null, null, null, null, null, null)
@@ -20,12 +19,16 @@ class Alumno(var matricula : Int ?, var nombre : String ?, var apPaterno : Strin
 
         if(n > 0) {
             for (calificacion in calificaciones)
-                suma += calificacion.calificacion
+                calificacion.calificacion = calificacion.calificacion!!
             promedio = suma / n
         }
 
         return promedio
     }
+
+    fun getNombre() : String = nombre + " " + apPaterno + " " + apMaterno
+
+    override fun toString() : String = matricula.toString() + " - " + getNombre()
 
     fun setNacimiento(fecha : String){
         val formato = SimpleDateFormat("yyyy-MM-dd")
@@ -53,9 +56,5 @@ class Alumno(var matricula : Int ?, var nombre : String ?, var apPaterno : Strin
     fun leerFecha(formato : String) : String{
         val formato = SimpleDateFormat(formato)
         return formato.format(nacimiento)
-    }
-
-    override fun toString(): String {
-        return "Alumno(matricula=$matricula, nombre='$nombre', apPaterno='$apPaterno', apMaterno='$apMaterno', nacimiento=$nacimiento, sexo=$sexo)"
     }
 }
