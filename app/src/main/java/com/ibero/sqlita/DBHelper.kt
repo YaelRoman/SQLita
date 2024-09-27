@@ -1,6 +1,7 @@
 package com.ibero.sqlita
 
 import android.content.Context
+import android.content.res.Resources
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import java.io.File
@@ -21,9 +22,10 @@ class DBHelper(context : Context?) : SQLiteOpenHelper(context, DB_NAME, null, DB
     }
 
     fun getComando(n : Int) : String{
-        val sql = File("comandos.sql").readText()
-        val comandos = sql.split(";")
+        val sql = this::class.java.classLoader.getResource("res/raw/comandos.txt").readText()
 
+        //val sql = this::class.java.classLoader.getResource("comandos.txt").readText()
+        val comandos = sql.split(";")
         return comandos.get(n)
     }
 }
