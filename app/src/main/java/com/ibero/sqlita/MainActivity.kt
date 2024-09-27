@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.util.Date
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +21,9 @@ class MainActivity : AppCompatActivity() {
 
         val textView : TextView = findViewById(R.id.textView)
         val db = DBHelper(this)
-        textView.setText(db.getComando(1))
+        textView.setText(db.getComando(0)+"-"+db.getComando(1)+"-"+db.getComando(2))
+            val dataManager = DataManager(this)
+        //dataManager.guardarAlumno(Alumno(123,"Monica", "Medrano", "Valle", Date(), 'F'))
+
     }
 }

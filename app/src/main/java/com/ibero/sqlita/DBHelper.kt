@@ -12,19 +12,24 @@ val DB_VERSION = 1
 class DBHelper(context : Context?) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION){
 
     override fun onCreate(db: SQLiteDatabase?) {
-       /* if (db != null) {
-            db.execSQL("CREATE TABLE alumnos")
-        }*/
+       if (db != null){
+           db.execSQL(getComando(0))
+           db.execSQL(getComando(1))
+           db.execSQL(getComando(2))
+       }
     }
 
-    override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
-        TODO("Not yet implemented")
+    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+        if (db != null) {
+            db.execSQL(getComando(3))
+            db.execSQL(getComando(4))
+            db.execSQL(getComando(5))
+        }
     }
 
     fun getComando(n : Int) : String{
         val sql = this::class.java.classLoader.getResource("res/raw/comandos.txt").readText()
 
-        //val sql = this::class.java.classLoader.getResource("comandos.txt").readText()
         val comandos = sql.split(";")
         return comandos.get(n)
     }
