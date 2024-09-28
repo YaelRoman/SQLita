@@ -19,6 +19,15 @@ class Calificacion(var materia : Materia?, var calificacion : Double?) {
         }
     }
 
+    fun setFecha(fecha : String){
+        val formato = SimpleDateFormat("yyyy-MM-dd")
+        try {
+            this.fecha = formato.parse(fecha)
+        }   catch (ex : Exception){
+            this.fecha = Date()
+        }
+    }
+
     fun leerFecha() : String{
         val formato = SimpleDateFormat("yyyy-MM-dd")
         return formato.format(fecha)

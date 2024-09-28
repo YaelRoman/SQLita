@@ -27,10 +27,12 @@ class DBHelper(context : Context?) : SQLiteOpenHelper(context, DB_NAME, null, DB
         }
     }
 
-    fun getComando(n : Int) : String{
-        val sql = this::class.java.classLoader.getResource("res/raw/comandos.txt").readText()
+    companion object {
+        fun getComando(n : Int) : String{
+            val sql = this::class.java.classLoader.getResource("res/raw/comandos.txt").readText()
 
-        val comandos = sql.split(";")
-        return comandos.get(n)
+            val comandos = sql.split(";")
+            return comandos.get(n)
+        }
     }
 }
