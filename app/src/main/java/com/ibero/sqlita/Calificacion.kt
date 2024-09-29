@@ -8,7 +8,11 @@ class Calificacion(var materia : Materia?, var calificacion : Double?) {
 
     constructor() : this(null, null)
 
-    override fun toString() : String = materia.toString() + " : " + String.format("%1$,.2f", calificacion)
+    override fun toString() : String = materia.toString() + " | " + String.format("%1$,.2f", calificacion) + " | "+ leerFecha()
+
+    fun setFecha(){
+            this.fecha = Date()
+    }
 
     fun setFecha(fecha : String, formato : String){
         val formato = SimpleDateFormat(formato)

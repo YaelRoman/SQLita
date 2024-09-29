@@ -79,7 +79,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="Clave"
+                        android:hint="Clave *"
                         android:textColorHint="#2D2828"
                         android:inputType="number"
                         android:paddingStart="10dp"
@@ -92,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="Nombre"
+                        android:hint="Nombre *"
                         android:textColorHint="#2D2828"
                         android:inputType="text"
                         android:paddingStart="10dp"
@@ -112,6 +112,14 @@
                         android:textSize="16sp" />
                 </LinearLayout>
 
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_weight="0.5"
+                    android:text="* Datos obligatorios"
+                    android:textAlignment="textEnd" />
 
                 <Button
                     android:id="@+id/btn_guardar"
@@ -171,7 +179,7 @@
                     app:iconPadding="0dp" />
 
                 <Button
-                    android:id="@+id/btn_Lista"
+                    android:id="@+id/btn_lista"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

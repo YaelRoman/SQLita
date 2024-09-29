@@ -48,7 +48,7 @@
 
                 <LinearLayout
                     android:layout_width="350dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
@@ -57,26 +57,12 @@
                     android:translationX="20dp">
 
                     <ListView
+                        android:id="@+id/lV_materias"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
                     </ListView>
-
-                    <Button
-                        android:id="@+id/btn_Volver"
-                        android:layout_width="300dp"
-                        android:layout_height="120dp"
-                        android:layout_weight="1"
-                        android:height="0px"
-                        android:backgroundTint="#2A2525"
-                        android:fontFamily="sans-serif"
-                        android:minHeight="0px"
-                        android:paddingTop="0dp"
-                        android:paddingBottom="0dp"
-                        android:text="Volver"
-                        android:textSize="16sp"
-                        android:translationX="22dp" />
 
 
                 </LinearLayout>

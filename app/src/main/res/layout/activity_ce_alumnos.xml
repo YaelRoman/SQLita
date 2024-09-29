@@ -66,24 +66,24 @@
                 <LinearLayout
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:translationX="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/round_layout">
+                    android:layout_weight="1"
+                    android:background="@drawable/round_layout"
+                    android:orientation="vertical"
+                    android:translationX="20dp">
 
                     <EditText
-                        android:id="@+id/eTxt_Nombre"
+                        android:id="@+id/eTxt_nombre"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="Nombre"
-                        android:textColorHint="#2D2828"
+                        android:hint="Nombre *"
                         android:inputType="text"
                         android:paddingStart="10dp"
                         android:textAlignment="viewStart"
+                        android:textColorHint="#2D2828"
                         android:textSize="16sp" />
 
                     <EditText
@@ -92,12 +92,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="Apellido Paterno"
-                        android:textColorHint="#2D2828"
+                        android:hint="Apellido Paterno *"
                         android:inputType="text"
                         android:paddingStart="10dp"
                         android:textAlignment="viewStart"
+                        android:textColorHint="#2D2828"
                         android:textSize="16sp" />
+
                     <EditText
                         android:id="@+id/eTxt_apMaterno"
                         android:layout_width="match_parent"
@@ -105,22 +106,23 @@
                         android:layout_weight="1"
                         android:ems="10"
                         android:hint="Apellido Materno"
-                        android:textColorHint="#2D2828"
                         android:inputType="text"
                         android:paddingStart="10dp"
                         android:textAlignment="viewStart"
+                        android:textColorHint="#2D2828"
                         android:textSize="16sp" />
+
                     <EditText
                         android:id="@+id/eTxt_nacimiento"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="Fecha de nacimiento"
-                        android:textColorHint="#2D2828"
+                        android:hint="Fecha de nacimiento *"
                         android:inputType="text"
                         android:paddingStart="10dp"
                         android:textAlignment="viewStart"
+                        android:textColorHint="#2D2828"
                         android:textSize="16sp" />
 
                     <LinearLayout
@@ -133,17 +135,16 @@
                             android:id="@+id/textView"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
                             android:layout_weight="3"
                             android:maxLines="1"
-                            android:text="Sexo"
-                            android:textColor="#2D2828"
                             android:paddingStart="10dp"
-                            android:textSize="16sp"
-                            android:layout_marginTop="10dp"
-                            />
+                            android:text="Sexo *"
+                            android:textColor="#2D2828"
+                            android:textSize="16sp" />
 
                         <Spinner
-                            android:id="@+id/sp_Sexo"
+                            android:id="@+id/sp_sexo"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -154,9 +155,17 @@
                 </LinearLayout>
 
 
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_weight="0.5"
+                    android:text="* Datos obligatorios"
+                    android:textAlignment="textEnd" />
 
                 <Button
-                    android:id="@+id/btn_Guardar"
+                    android:id="@+id/btn_guardar"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -175,7 +184,7 @@
                     app:iconPadding="0dp" />
 
                 <Button
-                    android:id="@+id/btn_Lista"
+                    android:id="@+id/btn_lista"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

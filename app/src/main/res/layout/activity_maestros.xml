@@ -93,7 +93,7 @@
                             />
 
                         <Spinner
-                            android:id="@+id/sp_Materia"
+                            android:id="@+id/sp_materia"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -120,7 +120,7 @@
                             />
 
                         <Spinner
-                            android:id="@+id/sp_Alumno"
+                            android:id="@+id/sp_alumno"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -148,7 +148,7 @@
 
 
                 <Button
-                    android:id="@+id/btn_Guardar"
+                    android:id="@+id/btn_guardar"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

@@ -14,11 +14,11 @@ CREATE TABLE materias(
 );
 
 CREATE TABLE calificaciones(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     alumno INT,
     materia CHAR(5),
     calificacion FLOAT,
     fecha DATE,
-    PRIMARY KEY (alumno, materia),
     FOREIGN KEY (alumno) REFERENCES alumnos(matricula),
     FOREIGN KEY (materia) REFERENCES materias(clave)
 );

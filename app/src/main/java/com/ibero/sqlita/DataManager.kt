@@ -58,8 +58,9 @@ class DataManager(context : Context) {
     fun leerAlumno(matricula : Int) : Alumno{
         var alumno = Alumno()
         val columnas = arrayOf("matricula","nombre","apPaterno", "apMaterno", "nacimiento", "sexo")
-        val cursor = db.query("alumnos", columnas, "matricula=?",null,
-                      null, null, "matricula")
+        val argumentos = arrayOf(matricula.toString())
+        val cursor = db.query("alumnos", columnas, "matricula=?",argumentos,null,
+                      null, null)
 
         while(cursor.moveToNext()){
             alumno = Alumno()
