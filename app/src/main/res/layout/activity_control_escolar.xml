@@ -27,7 +27,7 @@
                 android:paddingStart="30dp"
                 android:paddingTop="30dp"
                 android:paddingBottom="0dp"
-                android:text="Bienvenido,"
+                android:text="Control Escolar"
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textColor="#2D2828"
@@ -39,7 +39,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:paddingLeft="30dp"
-                android:text="Elige un menú para comenzar"
+                android:text="Agregar o consultar..."
                 android:textColor="#2D2828"
                 android:textSize="16sp" />
 
@@ -57,14 +57,14 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="350dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/notebook" />
+                    app:srcCompat="@drawable/list" />
 
                 <Button
-                    android:id="@+id/btn_controlEscolar"
+                    android:id="@+id/btn_materias"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -75,27 +75,12 @@
                     android:minHeight="0px"
                     android:paddingTop="0dp"
                     android:paddingBottom="0dp"
-                    android:text="Control Escolar"
+                    android:text="Materias"
                     android:textAlignment="center"
                     android:textSize="16sp"
                     android:translationX="22dp"
                     android:typeface="normal"
                     app:iconPadding="0dp" />
-
-                <Button
-                    android:id="@+id/btn_maestros"
-                    android:layout_width="350dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:height="0px"
-                    android:backgroundTint="#2A2525"
-                    android:fontFamily="sans-serif"
-                    android:minHeight="0px"
-                    android:paddingTop="0dp"
-                    android:paddingBottom="0dp"
-                    android:text="Maestros"
-                    android:textSize="16sp"
-                    android:translationX="22dp" />
 
                 <Button
                     android:id="@+id/btn_alumnos"
